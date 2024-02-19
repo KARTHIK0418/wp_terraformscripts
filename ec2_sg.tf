@@ -5,10 +5,10 @@ resource "aws_security_group" "demosg" {
   # Inbound Rules
   # HTTP access from the security group 
   ingress {
-    from_port                = 80
-    to_port                  = 80
-    protocol                 = "tcp"
-    cidr_blocks          = ["0.0.0.0/0"]
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   # SSH access from anywhere
@@ -22,9 +22,9 @@ resource "aws_security_group" "demosg" {
   # Outbound rules
   # Internet access to anywhere
   egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-}
+    from_port = 0
+    to_port   = 0
+    protocol  = "-1"
+  }
 }
 
